@@ -11,4 +11,10 @@ function deleteBook(id) {
     payload: id,
   };
 }
-export { addBook, deleteBook };
+function addFavotite(id) {
+  return {
+    type: actionTypes.TOGGLE_BOOK,
+    payload: id,
+  };
+}
+export { addBook, deleteBook, addFavotite };
