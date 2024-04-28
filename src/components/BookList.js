@@ -1,8 +1,9 @@
 import "./BookList.css";
 import { useSelector, useDispatch } from "react-redux";
-import { addFavotite, deleteBook } from "../redux/actionCreators";
+// import { addFavotite, deleteBook } from "../redux/actionCreators";
 import { BsBookmarkStar } from "react-icons/bs";
 import { BsBookmarkStarFill } from "react-icons/bs";
+import { toogleFavorite, deleteBook } from "../redux/bookSlice/bookSlice";
 function BookList() {
   const books = useSelector((state) => state.books);
   const filterData = useSelector((state) => {
@@ -23,7 +24,7 @@ function BookList() {
   });
 
   function handleFavorite(id) {
-    dispatch(addFavotite(id));
+    dispatch(toogleFavorite(id));
   }
   function deleteHandler(id) {
     dispatch(deleteBook(id));

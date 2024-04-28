@@ -83,7 +83,6 @@ function Filter() {
             Only Favorite
           </label>
         </div>
-
         <button onClick={handleResetFilter}>Reset filters</button>
       </div>
     </div>
